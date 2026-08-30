@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Bate Ponto</title>
+  </head>
+  <body>
+    <main class="container">
+      <header><div><p class="eyebrow">CONTROLE DE JORNADA</p><h1>Bate Ponto</h1></div><time id="clock"></time></header>
+      <section class="hero"><p id="today">Hoje</p><h2 id="status">Nenhuma jornada iniciada</h2><p id="status-detail">Registre sua entrada para começar.</p><div class="actions"><button id="main-action">Registrar entrada</button><button id="pause-action" class="secondary" disabled>Pausar</button></div></section>
+      <section class="cards"><article><span>Horas no mês</span><strong id="worked-hours">00h 00min</strong></article><article><span>Folgas no mês</span><strong id="leave-days">0</strong></article></section>
+      <section class="panel"><div class="section-head"><h2>Registros</h2><input id="month" type="month" aria-label="Selecionar mês" /></div><div id="records" class="records"></div></section>
+      <section class="panel leave"><h2>Adicionar folga</h2><form id="leave-form"><input id="leave-date" type="date" required /><input id="leave-reason" placeholder="Motivo (ex.: folga semanal)" /><button type="submit" class="secondary">Salvar folga</button></form></section>
+    </main>
+    <template id="record-template"><article class="record"><div><strong class="record-title"></strong><p class="record-detail"></p></div><button class="delete" aria-label="Excluir registro">×</button></article></template>
+    <script src="/app.js"></script>
+  </body>
+</html>
